@@ -4,7 +4,7 @@ if [[ $(xprop -id $(bspc query -N -n) WM_CLASS) = *"Steam"* ]]; then
     xdotool windowunmap $(xdotool getactivewindow)
     exit
 else
-    # kill natively with bspc
-    bspc node focused -{c,k}
+    # close natively with bspc
+    bspc node focused -c
     exit;
 fi
