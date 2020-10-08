@@ -1,10 +1,10 @@
 #!/bin/bash
-if [[ $(xprop -id $(xdotool getactivewindow) WM_CLASS) = *"Steam"* ]]; then
+if [[ $(xprop -id $(bspc query -N -n) WM_CLASS) = *"Steam"* ]]; then
     # unmap steam window
     xdotool windowunmap $(xdotool getactivewindow)
     exit
 else
-    # close focused window (enable focus follow mouse + DOWNLOAD wmctrl)
-    wmctrl -c :ACTIVE:
+    # kill natively with bspc
+    bspc node focused -{c,k}
     exit;
 fi
