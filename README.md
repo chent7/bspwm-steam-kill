@@ -1,7 +1,7 @@
 # bspwm-steam-kill
 Script used to replace default window close (bspc node -{c,k}), so that steam close as expected.
 
-**Requires wmctrl.**
+**Requires xprop, xdotool.**
 
 Add script location to your `~/.config/sxhkd/sxhkdrc`, as a replacement for close shortcut. For example:
 ```
